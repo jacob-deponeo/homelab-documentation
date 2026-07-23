@@ -21,7 +21,7 @@ The above was verified via ping test: VM-to-VM communication succeeds, internet 
 - nftables rule still present in guest_input
 
 ### Command Reference
-- `doas nano /etc/conf.d/libvirtd` changed: rc_need="" so that libvirtd no longer requires internet to run
-- `doas nft list ruleset`
-- `doas nft list table ip libvirt_network`
-- `doas nft add rule ip libvirt_network guest_input iifname "virbr1" drop`
+- `nano /etc/conf.d/libvirtd` changed: rc_need="" so that libvirtd no longer requires internet to run
+- `nft list ruleset`
+- `nft list table ip libvirt_network`
+- `nft add rule ip libvirt_network guest_input iifname "virbr1" drop`
