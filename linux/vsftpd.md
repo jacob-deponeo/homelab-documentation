@@ -9,7 +9,7 @@ See: [README.md](https://github.com/jacob-deponeo/homelab-documentation/blob/mai
 While initially I was very quickly able to use the metasploit framework to quickly run the necessary commands, I was not satisfied. I attempted this simple exploit by hand.
 nmap -sV, netcat <ip>, put a ':)' at the end of a random username followed by a random password, created a new shell and entered 'id' to confirm root access.
 
-## What I Learned
+## Conclusion
 Malicious code injections are an extreme vulnerability. Sufficient code audits should be performed before commits to ensure backdoors such as this are not so easily planted.
 
 ## Commands Reference
