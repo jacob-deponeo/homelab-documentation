@@ -11,6 +11,15 @@ To prevent the VMs from reaching my host machine, I used [nftables](https://wiki
 
 The above was verified via ping test: VM-to-VM communication succeeds, internet traffic is unreachable (ping 8.8.8.8 fails, no route), and host traffic is dropped (route exists, packets discarded).
 
+### Isolation Verification Checklist
+- `virsh domiflist` on both VMs shows only "labnet"
+- `virsh net-dumpxml labnet` shows no forward/NAT
+- `ip a` inside each VM shows 192.168.100.x
+- `ping 8.8.8.8` fails with "unreachable"
+- `ping 192.168.100.1` shows 100% loss (route exists, drop confirmed)
+- VM-to-VM ping succeeds
+- nftables rule still present in guest_input
+
 ### Command Reference
 - `doas nano /etc/conf.d/libvirtd` changed: rc_need="" so that libvirtd no longer requires internet to run
 - `doas nft list ruleset`
