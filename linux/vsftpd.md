@@ -6,7 +6,6 @@ I have ensured that my virtual machines are completely isolated from my LAN as w
 
 I installed a manually-configured a minimalist installation of Gentoo Linux. I utilised the tools [QEMU](https://www.qemu.org/), [libvirt](https://libvirt.org/) and [virt-manager](https://virt-manager.org/) to create virtual machines for both a [Kali](https://www.kali.org/) Linux installation as the attacker, and a [Metasploitable 2](https://docs.rapid7.com/metasploit/metasploitable-2/) installation as the defender.
 
-## My Firewall
 To ensure my host machine could not be reached by the VMs, I used [nftables](https://wiki.nftables.org/wiki-nftables/index.php/Main_Page) to create a rule that drops all traffic to my host. With 8.8.8.8 being unreachable,
 100% packet loss to my host, and the VMs able to ping each other, I was satisfied.
 
