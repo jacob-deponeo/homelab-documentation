@@ -2,7 +2,9 @@
 Perform the classic backdoor on vsftpd, on open port 21 to give me an open shell on port 6200.
 
 ## Environment
-See: [README.md](https://github.com/jacob-deponeo/homelab-documentation/blob/main/README.md#environment)
+I have ensured that my virtual machines are completely isolated from my LAN as well as setting up a firewall rule to drop packets to my host machine, making it air-tight.
+
+I installed a manually-configured a minimalist installation of Gentoo Linux. I utilised the tools [QEMU](https://www.qemu.org/), [libvirt](https://libvirt.org/) and [virt-manager](https://virt-manager.org/) to create virtual machines for both a [Kali](https://www.kali.org/) Linux installation as the attacker, and a [Metasploitable 2](https://docs.rapid7.com/metasploit/metasploitable-2/) installation as the defender.
 
 ## My Firewall
 To ensure my host machine could not be reached by the VMs, I used [nftables](https://wiki.nftables.org/wiki-nftables/index.php/Main_Page) to create a rule that drops all traffic to my host. With 8.8.8.8 being unreachable,
