@@ -13,7 +13,6 @@ nmap -sV, netcat <ip>, put a ':)' at the end of a random username followed by a 
 Malicious code injections are an extreme vulnerability. Sufficient code audits should be performed before commits to ensure backdoors such as this are not so easily planted.
 
 ## Commands Reference
-
-### Exploit
 - `nmap -sV`
 - `netcat`
+- `guid`
