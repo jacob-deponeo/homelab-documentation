@@ -1,6 +1,9 @@
 # Objective
 Perform the classic backdoor on vsftpd, on open port 21 to give me an open shell on port 6200.
 
+## Environment
+See: [README.md](https://github.com/jacob-deponeo/homelab-documentation/blob/main/README.md#environment)
+
 ## My Firewall
 To ensure my host machine could not be reached by the VMs, I used [nftables](https://wiki.nftables.org/wiki-nftables/index.php/Main_Page) to create a rule that drops all traffic to my host. With 8.8.8.8 being unreachable,
 100% packet loss to my host, and the VMs able to ping each other, I was satisfied.
