@@ -8,3 +8,9 @@ I installed a manually-configured a minimalist installation of Gentoo Linux. I u
 
 I have ensured that my virtual machines are completely isolated from my LAN using a custom labnet profile with no forwarding/NAT.
 To ensure my host machine could not be reached by the VMs, I used [nftables](https://wiki.nftables.org/wiki-nftables/index.php/Main_Page) to create a rule that drops all traffic to my host.
+
+### Command Reference
+- `doas nano /etc/conf.d/libvirtd` changed: rc_need="" so that libvirtd can run without internet
+- `doas nft list ruleset`
+- `doas nft list table ip libvirt_network`
+- `doas nft add rule ip libvirt_network guest_input iifname "virbr1" drop`
