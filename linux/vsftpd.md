@@ -20,5 +20,5 @@ nmap -sV, netcat <ip>, put a ':)' at the end of a random username followed by a 
 - `doas nft add rule ip libvirt_network guest_input iifname "virbr1" drop`
 
 ### Exploit
--`nmap -sV`
--`netcat`
+- `nmap -sV`
+- `netcat`
